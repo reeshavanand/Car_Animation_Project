@@ -1,0 +1,139 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+body{
+    overflow:hidden;
+}
+.sky{
+    height:100vh;
+    width:100%;
+
+    background-image:url(background.jpg);
+    background-repeat: no-repeat;
+    position: absolute;
+    animation:skymove linear 3s infinite;
+}
+
+.road{
+    height: 190px;
+    width: 6000px;
+    top: 65%;
+    background-image: url(road.jpg);
+    background-repeat: repeat-x;
+    background-size: auto;
+    position: absolute;
+    animation:carMove linear 4s infinite;
+}
+
+.car{
+    height: 110px;
+    width: 350px;
+    bottom: 8%;
+    left: 135px;
+    background-image: url(car_body.png);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation:shakes linear 3s infinite;
+    
+    
+}
+
+
+.wheel1 img{
+    
+    width: 55px;
+    position:relative;
+    top:48px;
+    left:224px;
+    animation:wheelRotation linear .2s infinite;
+    
+}
+
+.wheel2 img{
+    
+    width: 55px;
+    position: relative;
+    top: -15px;
+    left: 47px;
+    animation:wheelRotation linear .2s infinite;
+   
+}
+.car2{
+    height: 100px;
+    width: 300px;
+    bottom: 20%;
+    left: 650px;
+    background-image: url(car2.png);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation:shakes linear 3s infinite;   
+}
+
+.carwheel1 img{
+    
+    width: 55px;
+    position:relative;
+    top:35px;
+    left:22px;
+    animation:wheelRotation linear .2s infinite;
+    
+}
+
+.carwheel2 img{
+    
+    width: 55px;
+    position: relative;
+    top: -23px;
+    left: 202px;
+    animation:wheelRotation linear .2s infinite;
+   
+}
+
+@keyframes wheelRotation
+{
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes carMove
+{
+    100%{
+        transform:translatex(-4000px);
+    }
+}
+
+
+@keyframes shakes{
+    0%{
+        transform:translateY(-2px);
+    }
+
+    50%{
+        transform:translateY(3px);
+    }
+
+    100%{
+        transform:translateY(-2px);
+    }
+}
+
+@keyframes skymove{
+    0%{
+        transform:translatex(-5px);
+    }
+    25%{
+        transform:translateY(5px);
+    }
+    50%{
+        transform:translateX(5px);
+    }
+
+    100%{
+        transform:translateY(-5px);
+    }
+}
